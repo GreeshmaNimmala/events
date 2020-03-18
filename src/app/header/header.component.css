@@ -1,0 +1,15 @@
+body
+ { 
+     padding-top: 60px;
+     }
+
+.navbar-nav>li{
+    margin-right: 10px;
+
+}
+    
+ul li a{
+    text-decoration: none;
+    list-style: none;
+    margin-right: 10px;
+}

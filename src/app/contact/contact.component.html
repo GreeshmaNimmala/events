@@ -1,0 +1,32 @@
+<div class="container">
+    <h3 id="header">Contact</h3>
+<div class="row">
+    <div class="col-xs-12">
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" class="form-control" [formControlName]="'name'">
+                <span *ngIf="!contactForm.get('name').valid && contactForm.get('name').touched"> Please enter a name    </span>        
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" class="form-control" [formControlName]="'email'">
+                <span *ngIf="!contactForm.get('email').valid && contactForm.get('email').touched"> Please enter your Email    </span>        
+            </div>
+            <div class="form-group">
+                <label for="phoneNumber">Phone Number</label>
+                    <input type="number" id="phoneNumber" class="form-control" [formControlName]="'mobileNumber'">
+                    <span *ngIf="!contactForm.get('mobileNumber').valid && contactForm.get('mobileNumber').touched"> Please enter your mobile number   </span>        
+            
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message"  rows="5" class="form-control" [formControlName]="'message'" ></textarea>
+                
+            </div>
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+
+    </div>
+</div>
+</div>
